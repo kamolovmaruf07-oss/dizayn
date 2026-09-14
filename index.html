@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aziz Rahimov — UI/UX Dizayner | Soft UI Portfolio</title>
+  <meta name="description" content="Soft UI (neyumorfizm) uslubidagi shaxsiy portfolio. UI/UX dizayn, brending va prototiplash bo'yicha xizmatlar." />
+  <script>
+    // Mavzuni "FOUC"siz qo'llash: localStorage yoki tizim sozlamasidan o'qish
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'dark' && t !== 'light') {
+        t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233d8bfd'/%3E%3Ccircle cx='32' cy='32' r='14' fill='none' stroke='white' stroke-width='6'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATSIYA ===== -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-shell neu-raised">
+      <a class="logo" href="#top" aria-label="Bosh sahifa">
+        <span class="logo-mark neu-inset">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="6"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+        </span>
+        <span class="logo-text">aziz<strong>.ui</strong></span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Asosiy navigatsiya">
+        <a class="nav-link is-active" href="#top">Bosh sahifa</a>
+        <a class="nav-link" href="#haqimda">Haqimda</a>
+        <a class="nav-link" href="#koinikmalar">Ko'nikmalar</a>
+        <a class="nav-link" href="#portfolio">Portfolio</a>
+        <a class="nav-link" href="#xizmatlar">Xizmatlar</a>
+        <a class="nav-link" href="#aloqa">Aloqa</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle neu-raised" id="themeToggle" type="button" aria-label="Tun / kun rejimini almashtirish" title="Tun / kun rejimi">
+          <span class="icon-sun">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+          </span>
+          <span class="icon-moon">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg>
+          </span>
+          <span class="toggle-knob neu-inset"></span>
+        </button>
+        <button class="nav-burger neu-raised" id="navBurger" type="button" aria-label="Menyuni ochish" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+      </div>
+
+      <div class="hero-grid container">
+        <div class="hero-copy" data-reveal>
+          <span class="chip neu-raised">
+            <span class="chip-dot"></span> Soft UI · Neumorphism portfolio
+          </span>
+          <h1>
+            Salom, men <span class="accent-text">Aziz Rahimov</span> —
+            UI/UX dizayner
+          </h1>
+          <p class="lead">
+            G'oyalarga yumshoq forma beraman. Foydalanuvchi uchun qulay, ko'zga
+            yoqimli va zamonaviy raqamli mahsulotlar yarataman — och ko'kdan
+            to'q ko'kkacha bo'lgan ohanglarda.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#portfolio">
+              Ishlarimni ko'rish
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost neu-raised" href="#aloqa">Bog'lanish</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat neu-raised" data-reveal style="--d:.05s">
+              <strong class="counter" data-count="8" data-suffix="+">0</strong>
+              <span>yillik tajriba</span>
+            </div>
+            <div class="stat neu-raised" data-reveal style="--d:.12s">
+              <strong class="counter" data-count="120" data-suffix="+">0</strong>
+              <span>tugallangan loyiha</span>
+            </div>
+            <div class="stat neu-raised" data-reveal style="--d:.19s">
+              <strong class="counter" data-count="60" data-suffix="+">0</strong>
+              <span>mamnun mijoz</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-reveal style="--d:.1s">
+          <div class="avatar-ring neu-raised">
+            <div class="avatar-inner neu-inset">
+              <img src="assets/img/avatar.jpg" alt="Aziz Rahimov portreti" loading="eager" />
+            </div>
+          </div>
+          <div class="float-card float-card-1 neu-raised" data-reveal style="--d:.25s">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7-3-3-7 7-3 3 3-3z"/><path d="M18 13l-3-3"/><path d="M2 22l3-3"/></svg>
+            <div>
+              <strong>UI/UX dizayn</strong>
+              <span>Figma · Prototip</span>
+            </div>
+          </div>
+          <div class="float-card float-card-2 neu-raised" data-reveal style="--d:.32s">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <div>
+              <strong>8+ yil</strong>
+              <span>Soft UI tajribasi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HAQIMDA ===== -->
+    <section class="section" id="haqimda">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Tanishuv</span>
+          <h2>Haqimda</h2>
+          <p>Minimalizm, aniqlik va yumshoqlik — uch ustun, bitta maqsad: qulay mahsulot.</p>
+        </div>
+
+        <div class="about-grid">
+          <figure class="about-media neu-raised" data-reveal>
+            <div class="about-media-inner neu-inset">
+              <img src="assets/img/workspace.jpg" alt="Ish jarayoni — dizayner stoli va rang palitrasi" loading="lazy" />
+            </div>
+            <figcaption class="about-caption">
+              <span class="chip neu-raised">Ish jarayonim</span>
+            </figcaption>
+          </figure>
+
+          <div class="about-copy" data-reveal style="--d:.1s">
+            <h3>Dizayn — bu hissiyot va mantiqning muvozanati</h3>
+            <p>
+              8 yildan beri veb va mobil mahsulotlar uchun interfeys yarataman.
+              Soft UI (neyumorfizm) uslubida ishlayman: elementlar fonda erib
+              ketmaydi, aksincha — yumshoq soyalar orqali "jonli" tuyuladi.
+            </p>
+            <p>
+              Har bir loyihani tadqiqotdan boshlayman: foydalanuvchi kim, muammosi
+              nima va dizayn uni qanday yechadi. Keyin — toza kompozitsiya,
+              och ko'k va to'q ko'k ohanglar hamda puxta mikro-interaksiyalar.
+            </p>
+            <ul class="about-list">
+              <li class="neu-raised"><span>Minimalizm va aniqlik</span></li>
+              <li class="neu-raised"><span>Foydalanuvchi tadqiqoti (UX)</span></li>
+              <li class="neu-raised"><span>Dizayn tizimlari va hujjatlashuv</span></li>
+              <li class="neu-raised"><span>Mikro-interaksiya va animatsiya</span></li>
+            </ul>
+            <div class="about-meta">
+              <div class="meta-item">
+                <span class="meta-label">Joylashuv</span>
+                <strong>Toshkent, O'zbekiston</strong>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Email</span>
+                <strong>aziz@dizayn.uz</strong>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Holat</span>
+                <strong class="status-open"><span class="chip-dot"></span> Yangi loyihalarga ochiq</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== KO'NIKMALAR ===== -->
+    <section class="section" id="koinikmalar">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Mahorat</span>
+          <h2>Ko'nikmalar</h2>
+          <p>Asosiy yo'nalishlarim va ular bo'yicha tajriba darajam.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skills-card neu-raised" data-reveal>
+            <div class="skill">
+              <div class="skill-top"><span>UI dizayn</span><span class="skill-num">95%</span></div>
+              <div class="skill-track neu-inset"><div class="skill-fill" data-level="95"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-top"><span>UX tadqiqot</span><span class="skill-num">88%</span></div>
+              <div class="skill-track neu-inset"><div class="skill-fill" data-level="88"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-top"><span>Figma &amp; prototiplash</span><span class="skill-num">92%</span></div>
+              <div class="skill-track neu-inset"><div class="skill-fill" data-level="92"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-top"><span>Brending &amp; identifikatsiya</span><span class="skill-num">82%</span></div>
+              <div class="skill-track neu-inset"><div class="skill-fill" data-level="82"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-top"><span>HTML / CSS (Soft UI)</span><span class="skill-num">78%</span></div>
+              <div class="skill-track neu-inset"><div class="skill-fill" data-level="78"></div></div>
+            </div>
+          </div>
+
+          <div class="tools-card neu-raised" data-reveal style="--d:.1s">
+            <h3>Kundalik asboblarim</h3>
+            <div class="tools-cloud">
+              <span class="tool neu-inset">Figma</span>
+              <span class="tool neu-inset">Adobe XD</span>
+              <span class="tool neu-inset">Illustrator</span>
+              <span class="tool neu-inset">Photoshop</span>
+              <span class="tool neu-inset">Blender</span>
+              <span class="tool neu-inset">After Effects</span>
+              <span class="tool neu-inset">Notion</span>
+              <span class="tool neu-inset">Webflow</span>
+            </div>
+            <div class="tools-note neu-inset">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg>
+              <p>Soft UI prinsipi: interfeys bosimni emas, yengillikni his ettirsin.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PORTFOLIO ===== -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Ishlarim</span>
+          <h2>Portfolio</h2>
+          <p>Tanlangan loyihalar — mobil ilovalardan brend identifikatorigacha.</p>
+        </div>
+
+        <div class="works-grid">
+          <article class="work-card neu-raised" data-reveal>
+            <div class="work-media neu-inset">
+              <img src="assets/img/project-01.jpg" alt="Pulse Bank mobil ilovasi interfeysi" loading="lazy" />
+              <span class="work-overlay"><span class="btn btn-small">Ko'rish</span></span>
+            </div>
+            <div class="work-body">
+              <div class="work-tags"><span class="tag neu-inset">Mobil</span><span class="tag neu-inset">UI/UX</span></div>
+              <h3>Pulse Bank</h3>
+              <p>Yumshoq neyumorfik elementlarga ega mobil banking ilovasi — kartalar, o'tkazmalar, statistika.</p>
+            </div>
+          </article>
+
+          <article class="work-card neu-raised" data-reveal style="--d:.08s">
+            <div class="work-media neu-inset">
+              <img src="assets/img/project-02.jpg" alt="Orbit analitika dashboardi" loading="lazy" />
+              <span class="work-overlay"><span class="btn btn-small">Ko'rish</span></span>
+            </div>
+            <div class="work-body">
+              <div class="work-tags"><span class="tag neu-inset">SaaS</span><span class="tag neu-inset">Dashboard</span></div>
+              <h3>Orbit Analytics</h3>
+              <p>Tun rejimidagi analitika paneli: och ko'k grafiklar va to'q ko'k sirtlar uyg'unligi.</p>
+            </div>
+          </article>
+
+          <article class="work-card neu-raised" data-reveal style="--d:.16s">
+            <div class="work-media neu-inset">
+              <img src="assets/img/project-03.jpg" alt="Aether brend identifikatori" loading="lazy" />
+              <span class="work-overlay"><span class="btn btn-small">Ko'rish</span></span>
+            </div>
+            <div class="work-body">
+              <div class="work-tags"><span class="tag neu-inset">Brending</span><span class="tag neu-inset">Logo</span></div>
+              <h3>Aether Identity</h3>
+              <p>Minimal logotip, rang palitrasi va bosma materiallar — to'liq brend kitobi.</p>
+            </div>
+          </article>
+
+          <article class="work-card neu-raised" data-reveal>
+            <div class="work-media neu-inset">
+              <img src="assets/img/project-04.jpg" alt="Nasim mahsulot qadoqlash dizayni" loading="lazy" />
+              <span class="work-overlay"><span class="btn btn-small">Ko'rish</span></span>
+            </div>
+            <div class="work-body">
+              <div class="work-tags"><span class="tag neu-inset">3D</span><span class="tag neu-inset">Qadoq</span></div>
+              <h3>Nasim Packaging</h3>
+              <p>Parfyumeriya uchun premium qadoq dizayni — 3D render va material tanlovi.</p>
+            </div>
+          </article>
+
+          <article class="work-card neu-raised" data-reveal style="--d:.08s">
+            <div class="work-media neu-inset">
+              <img src="assets/img/project-05.jpg" alt="Savdo e-commerce platformasi" loading="lazy" />
+              <span class="work-overlay"><span class="btn btn-small">Ko'rish</span></span>
+            </div>
+            <div class="work-body">
+              <div class="work-tags"><span class="tag neu-inset">Web</span><span class="tag neu-inset">E-commerce</span></div>
+              <h3>Savdo Market</h3>
+              <p>Responsive e-commerce platformasi: yumshoq kartalar, oson checkout jarayoni.</p>
+            </div>
+          </article>
+
+          <article class="work-card neu-raised" data-reveal style="--d:.16s">
+            <div class="work-media neu-inset">
+              <img src="assets/img/workspace.jpg" alt="Nebula dizayn jarayoni case study" loading="lazy" />
+              <span class="work-overlay"><span class="btn btn-small">Ko'rish</span></span>
+            </div>
+            <div class="work-body">
+              <div class="work-tags"><span class="tag neu-inset">Case study</span><span class="tag neu-inset">Jarayon</span></div>
+              <h3>Nebula Process</h3>
+              <p>G'oyadan maketgacha: tadqiqot, wireframe, rang sinovlari va yakuniy dizayn.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== XIZMATLAR ===== -->
+    <section class="section" id="xizmatlar">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Takliflar</span>
+          <h2>Xizmatlar</h2>
+          <p>G'oyadan tayyor mahsulotgacha — to'liq tsikl bo'yicha yordam beraman.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card neu-raised" data-reveal>
+            <span class="service-icon neu-inset">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M3 9h18M9 21V9"/></svg>
+            </span>
+            <h3>UI/UX dizayn</h3>
+            <p>Veb va mobil ilovalar uchun toza, intuitiv va zamonaviy interfeyslar.</p>
+          </div>
+          <div class="service-card neu-raised" data-reveal style="--d:.08s">
+            <span class="service-icon neu-inset">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7-3-3-7 7-3 3 3-3z"/><path d="M18 13l-3-3"/><path d="M2 22l3-3"/></svg>
+            </span>
+            <h3>Brending</h3>
+            <p>Logotip, rang palitrasi, shriftlar va to'liq brend kitobi.</p>
+          </div>
+          <div class="service-card neu-raised" data-reveal style="--d:.16s">
+            <span class="service-icon neu-inset">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="3"/><path d="M8 21h8M12 18v3"/><path d="M7 10l3 3 5-5"/></svg>
+            </span>
+            <h3>Prototiplash</h3>
+            <p>Figma'da interaktiv prototiplar va foydalanuvchi testlari.</p>
+          </div>
+          <div class="service-card neu-raised" data-reveal style="--d:.24s">
+            <span class="service-icon neu-inset">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>
+            </span>
+            <h3>Dizayn tizimlari</h3>
+            <p>Komponentlar kutubxonasi, tokenlar va jamoa uchun hujjatlashuv.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FIKRLAR ===== -->
+    <section class="section" id="fikrlar">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Mijozlar</span>
+          <h2>Fikrlar</h2>
+          <p>Birga ishlagan odamlar nima deydi?</p>
+        </div>
+
+        <div class="quotes-grid">
+          <blockquote class="quote-card neu-raised" data-reveal>
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <p>Aziz bilan ishlash oson: muddatlar hurmat qilinadi, natija kutilganidan yuqori. Ilovamiz App Store'da 4.9 baho oldi.</p>
+            <footer>
+              <span class="quote-avatar neu-inset">MY</span>
+              <div><strong>Malika Yusupova</strong><span>Product Manager · Pulse Bank</span></div>
+            </footer>
+          </blockquote>
+          <blockquote class="quote-card neu-raised" data-reveal style="--d:.08s">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <p>Soft UI uslubidagi dashboard foydalanuvchilarimizga juda yoqdi — sessiya davomiyligi 35% ga oshdi.</p>
+            <footer>
+              <span class="quote-avatar neu-inset">JT</span>
+              <div><strong>Jasur Toshpo'latov</strong><span>CEO · Orbit Analytics</span></div>
+            </footer>
+          </blockquote>
+          <blockquote class="quote-card neu-raised" data-reveal style="--d:.16s">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <p>Brendimiz yangi qiyofada: qadoqlar premium ko'rinadi, savdo bir chorakda 40% ga o'sdi.</p>
+            <footer>
+              <span class="quote-avatar neu-inset">NK</span>
+              <div><strong>Nodira Karimova</strong><span>Asoschi · Savdo Market</span></div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ALOQA ===== -->
+    <section class="section" id="aloqa">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Aloqa</span>
+          <h2>Keling, gaplashamiz</h2>
+          <p>Loyihangiz bormi? Bir stakan kofe ustida muhokama qilamiz.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info" data-reveal>
+            <div class="info-card neu-raised">
+              <span class="service-icon neu-inset">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 7l9 6 9-6"/></svg>
+              </span>
+              <div><span class="meta-label">Email</span><strong>aziz@dizayn.uz</strong></div>
+            </div>
+            <div class="info-card neu-raised">
+              <span class="service-icon neu-inset">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>
+              </span>
+              <div><span class="meta-label">Telefon</span><strong>+998 90 123 45 67</strong></div>
+            </div>
+            <div class="info-card neu-raised">
+              <span class="service-icon neu-inset">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <div><span class="meta-label">Manzil</span><strong>Toshkent, O'zbekiston</strong></div>
+            </div>
+
+            <div class="socials">
+              <a class="social neu-raised" href="#top" aria-label="Behance"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M8.2 10.9c.6-.3 1-.9 1-1.7 0-1.7-1.3-2.2-2.9-2.2H2v8.9h4.4c1.8 0 3.5-.8 3.5-2.8 0-1.2-.6-2-1.7-2.2zM4.2 8.7h1.7c.8 0 1.4.3 1.4 1.1 0 .8-.6 1.1-1.4 1.1H4.2V8.7zm1.9 5.5H4.2v-2.5h1.9c1 0 1.6.4 1.6 1.3 0 .9-.7 1.2-1.6 1.2zM22 12.4c0-2.3-1.4-4.2-3.8-4.2-2.4 0-4 1.8-4 4.1 0 2.4 1.6 4 4.1 4 1.9 0 3.2-.9 3.6-2.6h-1.9c-.2.7-.9 1-1.7 1-1.2 0-1.9-.7-2-2H22v-.3zm-5.7-1.1c.1-1 .8-1.6 1.9-1.6 1 0 1.7.7 1.8 1.6h-3.7zM15.5 6.5h4.4v1.1h-4.4z"/></svg></a>
+              <a class="social neu-raised" href="#top" aria-label="Dribbble"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M5 8.5c4 1.5 9.5 1.5 13.5-1M4 14c5-1 11 .5 14 4M9.5 3.5c3 4.5 5 9.5 6 16"/></svg></a>
+              <a class="social neu-raised" href="#top" aria-label="Telegram"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21.9 4.4L18.9 19c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6L18.4 7c.4-.3-.1-.5-.6-.2L7.6 13.2 3.2 11.8c-1-.3-1-1 .2-1.4l17.3-6.7c.8-.3 1.5.2 1.2 .7z"/></svg></a>
+              <a class="social neu-raised" href="#top" aria-label="GitHub"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.2-.4-1.2.1-2.6 0 0 .8-.3 2.8 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></a>
+            </div>
+          </div>
+
+          <form class="contact-form neu-raised" id="contactForm" data-reveal style="--d:.1s" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Ismingiz</label>
+                <input class="neu-inset" id="name" name="name" type="text" placeholder="Aziz" autocomplete="name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input class="neu-inset" id="email" name="email" type="email" placeholder="siz@email.uz" autocomplete="email" required />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="message">Xabaringiz</label>
+              <textarea class="neu-inset" id="message" name="message" rows="5" placeholder="Loyihangiz haqida qisqacha yozing..." required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">
+              Yuborish
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <span class="logo-text">aziz<strong>.ui</strong></span>
+      <p>© <span id="year">2026</span> Aziz Rahimov. Barcha huquqlar himoyalangan.</p>
+      <button class="to-top neu-raised" id="toTop" type="button" aria-label="Yuqoriga qaytish">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+      </button>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

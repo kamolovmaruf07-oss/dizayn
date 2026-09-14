@@ -1,0 +1,24 @@
+{
+  "name": "dizayn-portfolio",
+  "version": "1.0.0",
+  "description": "Soft UI (neumorphism) portfolio website with day/night themes",
+  "scripts": {
+    "test": "node test/smoke.test.js",
+    "start": "python3 -m http.server 8000 --bind 0.0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamolovmaruf07-oss/dizayn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kamolovmaruf07-oss/dizayn/issues"
+  },
+  "homepage": "https://github.com/kamolovmaruf07-oss/dizayn#readme",
+  "dependencies": {
+    "jsdom": "^30.0.1"
+  },
+  "private": true
+}
