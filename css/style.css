@@ -1,51 +1,51 @@
 /* ============================================================
-   Soft UI (Neyumorfizm) Portfolio — och ko'k / to'q ko'k palitra
+   Soft UI (Neyumorfizm) Portfolio — och kulrang / to'q kulrang palitra
    Tun (dark) va Kun (light) mavzulari
    ============================================================ */
 
 /* ---------- Mavzu o'zgaruvchilari ---------- */
 :root {
-  /* Kun (light) */
-  --bg: #e3ecf7;
-  --bg-soft: #eaf1fa;
-  --text: #1c2f55;
-  --text-soft: #5f7195;
-  --accent: #3d8bfd;          /* och ko'k */
-  --accent-strong: #1f6fe0;
-  --accent-deep: #16386e;     /* to'q ko'k */
+  /* Kun (light) — och kulrang asos */
+  --bg: #e6e8ec;
+  --bg-soft: #edeff2;
+  --text: #2e3238;
+  --text-soft: #676e79;
+  --accent: #5c636e;          /* to'q kulrang */
+  --accent-strong: #434852;
+  --accent-deep: #30343b;     /* eng to'q kulrang */
   --on-accent: #ffffff;
-  --shadow-dark: rgba(163, 189, 224, 0.75);
+  --shadow-dark: rgba(168, 176, 188, 0.75);
   --shadow-light: rgba(255, 255, 255, 0.95);
-  --shadow-dark-soft: rgba(163, 189, 224, 0.5);
+  --shadow-dark-soft: rgba(168, 176, 188, 0.5);
   --shadow-light-soft: rgba(255, 255, 255, 0.7);
-  --track: rgba(163, 189, 224, 0.35);
+  --track: rgba(168, 176, 188, 0.35);
   --card-border: rgba(255, 255, 255, 0.55);
-  --ok: #2fbf8f;
-  --ring: rgba(61, 139, 253, 0.35);
-  --grad-accent: linear-gradient(135deg, #4da3ff 0%, #1f6fe0 100%);
-  --header-blur: rgba(227, 236, 247, 0.75);
+  --ok: #4a9d78;
+  --ring: rgba(92, 99, 110, 0.35);
+  --grad-accent: linear-gradient(135deg, #8b929d 0%, #434852 100%);
+  --header-blur: rgba(230, 232, 236, 0.75);
 }
 
 [data-theme="dark"] {
-  /* Tun (dark) */
-  --bg: #0f1c31;
-  --bg-soft: #13223b;
-  --text: #dce8ff;
-  --text-soft: #8ea6cd;
-  --accent: #5fb2ff;
-  --accent-strong: #7cc2ff;
-  --accent-deep: #8ec5ff;
-  --on-accent: #0b1830;
-  --shadow-dark: rgba(3, 8, 18, 0.7);
-  --shadow-light: rgba(46, 74, 122, 0.32);
-  --shadow-dark-soft: rgba(3, 8, 18, 0.55);
-  --shadow-light-soft: rgba(46, 74, 122, 0.22);
-  --track: rgba(3, 8, 18, 0.55);
-  --card-border: rgba(46, 74, 122, 0.35);
-  --ok: #3fd6a4;
-  --ring: rgba(95, 178, 255, 0.35);
-  --grad-accent: linear-gradient(135deg, #5fb2ff 0%, #2f7fe6 100%);
-  --header-blur: rgba(15, 28, 49, 0.75);
+  /* Tun (dark) — to'q kulrang asos */
+  --bg: #2a2c30;
+  --bg-soft: #2f3135;
+  --text: #e4e6e9;
+  --text-soft: #9ba1aa;
+  --accent: #a9afb8;
+  --accent-strong: #c6cbd2;
+  --accent-deep: #d3d7dd;
+  --on-accent: #1a1c1f;
+  --shadow-dark: rgba(5, 6, 8, 0.6);
+  --shadow-light: rgba(92, 96, 104, 0.32);
+  --shadow-dark-soft: rgba(5, 6, 8, 0.45);
+  --shadow-light-soft: rgba(92, 96, 104, 0.22);
+  --track: rgba(5, 6, 8, 0.55);
+  --card-border: rgba(92, 96, 104, 0.35);
+  --ok: #58b88c;
+  --ring: rgba(169, 175, 184, 0.35);
+  --grad-accent: linear-gradient(135deg, #b7bdc5 0%, #6a717c 100%);
+  --header-blur: rgba(42, 44, 48, 0.75);
 }
 
 /* ---------- Asosiy ---------- */
@@ -324,7 +324,7 @@ p { margin: 0 0 1em; }
     inset 1px 1px 2px rgba(255, 255, 255, 0.35);
 }
 
-[data-theme="dark"] .btn-primary { color: #071427; }
+[data-theme="dark"] .btn-primary { color: #14161a; }
 
 .btn-primary:hover { transform: translateY(-3px); filter: brightness(1.06); }
 .btn-primary:active { transform: translateY(0); }
@@ -584,7 +584,7 @@ p { margin: 0 0 1em; }
   transition: opacity 0.35s ease;
 }
 
-[data-theme="light"] .work-overlay { background: rgba(22, 56, 110, 0.42); }
+[data-theme="light"] .work-overlay { background: rgba(42, 45, 50, 0.45); }
 
 .work-card:hover .work-overlay,
 .work-card:focus-within .work-overlay { opacity: 1; }
